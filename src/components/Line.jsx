@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Line = ({ orientation = 'horizontal', color = '#000', thickness = '2px', length = '100%' }) => {
+const Line = ({ orientation = 'horizontal', color = '#82A3FF', thickness = '1.5px', length = '100%' }) => {
     return (
         <div
             style={{

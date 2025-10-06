@@ -6,6 +6,10 @@ import About from "./pages/About";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import Line from "./components/Line";
+import PlantAtlas from './pages/PlantAtlas';
+import SDNHM from './pages/SDNHM';
+
+
 
 function App() {
   return (
@@ -17,7 +21,11 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} /> 
+          <Route path="/about" element={<About />} />
+          <Route path="/sdnhm" element={<SDNHM />} />
+
+          <Route path="/plantatlas" element={<PlantAtlas />} />
+ 
         </Routes>
         <Contact />
       </div>
