@@ -47,12 +47,20 @@ function HomePage() {
                         <h1 className="text-big_text headers text-4xl font-cram ">
                             Portfolio
                         </h1>
-                        <img
-                            src="/images/ArrowDownCircle.svg"
-                            alt="Could not load arrow"
-                            className="w-12 h-12 animate-bounce mt-4 cursor-pointer hover:opacity-70 transition-opacity"
+
+                        <svg
+                            viewBox="0 0 70 70"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="w-12 h-12 mt-4 animate-bounce cursor-pointer transition-colors text-[#1E1E1E] hover:text-[#82A3FF]"
                             onClick={scrollToPortfolio}
-                        />
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M23.3333 35L35 46.6667M35 46.6667L46.6667 35M35 46.6667V23.3333M64.1667 35C64.1667 51.1083 51.1083 64.1667 35 64.1667C18.8917 64.1667 5.83334 51.1083 5.83334 35C5.83334 18.8917 18.8917 5.83334 35 5.83334C51.1083 5.83334 64.1667 18.8917 64.1667 35Z" />
+                        </svg>
                     </div>
                 </div>
             </div>
