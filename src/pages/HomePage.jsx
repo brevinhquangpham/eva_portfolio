@@ -33,6 +33,13 @@ function HomePage() {
                         </p>
                     </div>
                 </div>
+                <div className="flex flex-col justify-center items-center pr-20 mt-10">
+                    <img
+                        src="/images/eva.jpg"
+                        alt="Eva"
+                        className="w-72 h-auto border-2 border-gray-400"
+                    />
+                </div>
             </div>
             <div className="mx-auto flex justify-center items-center">
                 <div>
