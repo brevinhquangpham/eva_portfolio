@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 
 
 function HomePage() {
+    const scrollToPortfolio = () => {
+        const portfolioSection = document.getElementById('portfolio-section');
+        if (portfolioSection) {
+            portfolioSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    
     return (
         <div>
             <div className="flex flex-col-reverse md:flex-row justify-between">
@@ -20,8 +27,8 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center pr-20 mt-10">
-                    <img src="/images/eva.jpg" alt="Eva" className="w-72 h-auto border-2 border-gray-400" />
-                </div>
+                <img src="/images/ArrowDownCircle.svg" alt="Scroll down" className="w-12 h-12 animate-bounce mt-4 cursor-pointer hover:opacity-70 transition-opacity" onClick={scrollToPortfolio}
+/>                </div>
             </div>
             <div className="mx-auto flex justify-center items-center">
                 <div>
@@ -40,8 +47,9 @@ function HomePage() {
 
 
             </div>
-
+            <div id="portfolio-section">
             <Project imgSrc="/images/nathome.png"  headerText="Plant Atlas Redesign" date="September 2025" bodyText="As a part of my internship with the San Diego Natural History Museum, I redesigned the older plant atlas website to be more user friendly and in line with brand marketing." />
+            </div>
             <div className="flex justify-center mt-4 mb-12">
 
             <Link to="/sdnhm">
