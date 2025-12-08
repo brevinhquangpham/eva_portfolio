@@ -1,11 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=SUSE:wght@100;200;300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Amiko:wght@400;600;700&display=swap');
 
 .App {
     text-align: center;
 }
 
+.arrow-hover {
+    filter: brightness(0) saturate(100%);
+    transition: filter 0.3s ease;
+}
+
+.arrow-hover:hover {
+    filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(1744%) hue-rotate(201deg) brightness(102%) contrast(101%);
+}
 .App-logo {
     height: 40vmin;
     pointer-events: none;
