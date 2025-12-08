@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Line from '../components/Line'
 import Project from '../components/Project'
 
 function SDNHM() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="p-8">
             <div className="flex">

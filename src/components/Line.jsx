@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Line = ({ orientation = 'horizontal', color = '#82A3FF', thickness = '1.5px', length = '100%' }) => {
     return (
@@ -11,6 +11,5 @@ const Line = ({ orientation = 'horizontal', color = '#82A3FF', thickness = '1.5p
         />
     );
 };
-
 
 export default Line;

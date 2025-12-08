@@ -21,7 +21,7 @@ function About() {
             </div>
                 </div>
                 <div>
-                    <img src="/images/about2.png"  className="w-[1200px] h-[400px] object-cover mb-40 border-2 border-gray-400" />
+                    <img src="/images/eva.jpg"  className="w-[1200px] h-[400px] object-cover mb-40 border-2 border-gray-400" />
                 </div>
             </div>
         </div>
