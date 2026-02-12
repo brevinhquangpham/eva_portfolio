@@ -43,7 +43,7 @@ function HomePage() {
                         <img 
     src="/images/ArrowDownCircle.svg" 
     alt="Scroll down" 
-    className="w-12 h-12 animate-bounce mt-4 cursor-pointer arrow-hover" 
+    className="w-12 h-12  mt-4 cursor-pointer arrow-hover" 
     onClick={scrollToPortfolio}
 />
                     </div>
@@ -52,6 +52,17 @@ function HomePage() {
 
             </div>
             <div id="portfolio-section">
+            <Project imgSrc="/images/poster.jpeg"  headerText="Shasu Garment Recreation" date="November 2025" bodyText="Poster showcasing research at UC Cyber Archaeology lab on Shasu garment recreation. Presented at the ASOR conference 2025" />
+            <div className="flex justify-center mt-4 mb-12">
+                <Link to="/research">
+                    <button className="bg-slate-400 text-white font-raleway px-6 py-3 rounded-2xl hover:bg-big_text">
+                        Learn More
+                    </button>
+                </Link>
+            </div>
+            <div className="flex justify-center mt-4 mb-8"><Line length="80%" color="#9CA3AF"></Line></div>
+
+
             <Project imgSrc="/images/nathome.png"  headerText="Plant Atlas Redesign" date="September 2025" bodyText="As a part of my internship with the San Diego Natural History Museum, I redesigned the older plant atlas website to be more user friendly and in line with brand marketing." />
             </div>
             <div className="flex justify-center mt-4 mb-12">
@@ -65,17 +76,7 @@ function HomePage() {
 
             <div className="flex justify-center mt-4 mb-8"><Line length="80%" color="#9CA3AF"></Line></div>
 
-            <Project imgSrc="/images/poster.jpeg"  headerText="Expertimental Archaeology Reasearch Poster" date="November 2025" bodyText="Poster showcasing research at UC Cyber Archaeology lab on Shasu garment recreation. Presented at the ASOR conference 2025" />
-            <div className="flex justify-center mt-4 mb-12">
-                <Link to="/research">
-                    <button className="bg-slate-400 text-white font-raleway px-6 py-3 rounded-2xl hover:bg-big_text">
-                        Learn More
-                    </button>
-                </Link>
-            </div>
-            <div className="flex justify-center mt-4 mb-8"><Line length="80%" color="#9CA3AF"></Line></div>
-
-
+            
             <Project 
                 carouselImages={[
                     '/images/katamari1.jpg',

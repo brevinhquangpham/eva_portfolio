@@ -8,7 +8,7 @@ function Research() {
         window.scrollTo(0, 0);
     }, []);
     const carouselImages = [
-        '/images/video.mov',
+        { youtubeEmbedId: 'ehGu64XqWLs' },
         '/images/shasu2.jpg',
         '/images/shasu1.png',
         '/images/shasu4.png',

@@ -24,7 +24,7 @@ function SDNHM() {
                         </a>
                     </div>
                 </div>
-                <div className="w-[750px] h-[450px] overflow-hidden mb-40">
+              {/*  <div className="w-[750px] h-[450px] overflow-hidden mb-40">
                     <video 
                         src="/images/homepage.mov" 
                         className="w-[110%] h-[110%] object-cover -translate-x-[0%] -translate-y-[5%]"
@@ -32,7 +32,19 @@ function SDNHM() {
                         loop 
                         muted
                     />
+                </div> */}
+
+
+<div className="w-[700px] h-[420px] overflow-hidden ml-auto flex items-center justify-center -mt-8">
+    <iframe
+        className="w-[1100px] h-[620px]"
+                src={`https://www.youtube.com/embed/DLZj7U0QWcQ?autoplay=1&mute=1&loop=1&playlist=DLZj7U0QWcQ&controls=0&modestbranding=1&showinfo=0&rel=0`}                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
                 </div>
+
+
             </div>
 
             <div className="flex justify-center mt-0 mb-8">
