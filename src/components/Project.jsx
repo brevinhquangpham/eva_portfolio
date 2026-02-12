@@ -2,7 +2,7 @@ import React from 'react';
 import Line from './Line';
 import Carousel from './Carousel';
 
-function Project({ imgSrc, videoSrc, carouselImages, headerText, bodyText, date, videoClassName, titleOnTop }) {
+function Project({ imgSrc, videoSrc, youtubeEmbedId, carouselImages, headerText, bodyText, date, videoClassName, titleOnTop, videoScaleWidth = 110, videoScaleHeight = 110 }) {
     return (
         <div>
             {titleOnTop ? (
@@ -13,12 +13,28 @@ function Project({ imgSrc, videoSrc, carouselImages, headerText, bodyText, date,
                             <div className="p-8 w-[700px]">
                                 <Carousel images={carouselImages} />
                             </div>
+                        ) : youtubeEmbedId ? (
+                            <div className="p-8 w-[700px]">
+                                <div className={videoClassName || "w-full h-[450px] overflow-hidden"}>
+                                    <iframe
+                                        className="w-full h-full object-contain"
+                                        style={{ transform: `scaleX(${videoScaleWidth / 100}) scaleY(${videoScaleHeight / 100})` }}
+                                        width="100%"
+                                        height="100%"
+                                        src={`https://www.youtube.com/embed/${youtubeEmbedId}?autoplay=1&mute=1&loop=1&playlist=${youtubeEmbedId}&controls=0&modestbranding=1&showinfo=0&rel=0`}
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    />
+                                </div>
+                            </div>
                         ) : videoSrc ? (
                             <div className="p-8 w-[700px]">
                                 <div className={videoClassName || "w-full h-[450px] overflow-hidden"}>
                                     <video 
                                         src={videoSrc} 
-                                        className="w-[110%] h-[110%] object-cover -translate-x-[0%] -translate-y-[5%]"
+                                        className="object-cover -translate-x-[0%] -translate-y-[5%]"
+                                        style={{ width: `${videoScaleWidth}%`, height: `${videoScaleHeight}%` }}
                                         autoPlay 
                                         loop 
                                         muted
@@ -41,12 +57,26 @@ function Project({ imgSrc, videoSrc, carouselImages, headerText, bodyText, date,
                             <div className="p-8 w-[900px]">
                                 <Carousel images={carouselImages} />
                             </div>
+                        ) : youtubeEmbedId ? (
+                            <div className="p-8 w-[700px]">
+                                <div className={videoClassName || "w-full h-[450px] overflow-hidden"}>
+                                    <iframe
+                                        className="w-full h-full"
+                                        style={{ transform: `scaleX(${videoScaleWidth / 100}) scaleY(${videoScaleHeight / 100})` }}
+                                        src={`https://www.youtube.com/embed/${youtubeEmbedId}?autoplay=1&mute=1&loop=1&playlist=${youtubeEmbedId}&controls=0&modestbranding=1&showinfo=0&rel=0`}
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    />
+                                </div>
+                            </div>
                         ) : videoSrc ? (
                             <div className="p-8 w-[700px]">
                                 <div className={videoClassName || "w-full h-[450px] overflow-hidden"}>
                                     <video 
                                         src={videoSrc} 
-                                        className="w-[110%] h-[110%] object-cover -translate-x-[0%] -translate-y-[5%]"
+                                        className="object-cover -translate-x-[0%] -translate-y-[5%]"
+                                        style={{ width: `${videoScaleWidth}%`, height: `${videoScaleHeight}%` }}
                                         autoPlay 
                                         loop 
                                         muted

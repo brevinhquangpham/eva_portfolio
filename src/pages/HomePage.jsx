@@ -21,7 +21,11 @@ function HomePage() {
                     style={{ fontSize: '5.5rem' }}>
                             Eva S. Intoci
                         </h1>
-                        <p className="font-raleway text-2xl text-body_text leading-normal tracking-wider" style={{ maxWidth: '60rem' }}> I'm a creative designer pursuing videogame asset or UI design. Currently I'm finishing my degree in Interdisciplinary Computing and the Arts with a minor in Congitive Science at UC San Diego. 
+                        <p className="font-raleway text-2xl text-body_text leading-normal 
+                        tracking-wider" style={{ maxWidth: '60rem' }}> 
+                        I'm a creative designer passionate about 3D modeling and UI design. 
+                        Currently I'm finishing my degree in Interdisciplinary Computing and the
+                         Arts with a minor in Congitive Science at UC San Diego. 
                         </p>
                     </div>
                 </div>

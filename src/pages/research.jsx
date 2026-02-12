@@ -13,6 +13,7 @@ function Research() {
         '/images/shasu1.png',
         '/images/shasu4.png',
         '/images/shasu3.png',
+        '/images/hall.png',
     ];
 
     return (
