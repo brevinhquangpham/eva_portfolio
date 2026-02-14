@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Line from '../components/Line'
 import Project from '../components/Project'
 
 function SDNHM() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="p-8">
             <div className="flex">
@@ -21,13 +24,15 @@ function SDNHM() {
                         </a>
                     </div>
                 </div>
-                <div className="w-[750px] h-[450px] overflow-hidden mb-40">
-                    <video 
-                        src="/images/homepage.mov" 
-                        className="w-[110%] h-[110%] object-cover -translate-x-[0%] -translate-y-[5%]"
-                        autoPlay 
-                        loop 
-                        muted
+
+                <div className="w-[700px] h-[420px] overflow-hidden ml-auto -mt-8 relative">
+                    <iframe
+                        className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2"
+                        style={{ transform: 'translate(-50%, -50%) scaleX(1.05) scaleY(1.1)' }}
+                        src="https://www.youtube.com/embed/DLZj7U0QWcQ?autoplay=1&mute=1&loop=1&playlist=DLZj7U0QWcQ&controls=0&modestbranding=1&rel=0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
                     />
                 </div>
             </div>
@@ -36,8 +41,10 @@ function SDNHM() {
             </div>
 
             <Project 
-                videoSrc="/images/synoptic.mov" 
-                videoClassName="w-[720px] h-[450px] overflow-hidden"
+                youtubeEmbedId="uJW4dra1s4k"
+                videoClassName="w-[700px] h-[450px] overflow-hidden"
+                videoScaleWidth={105}
+                videoScaleHeight={110}
                 headerText="Search Page" 
                 date="" 
                 bodyText="This search function allows for users to search the museums 
@@ -45,17 +52,19 @@ function SDNHM() {
                 can be a great way to uderstand which member of certain genuses are present in 
                 San Diego as well as finding information of a specimen by specific epithet." 
             />
-                        <div className="flex justify-center mt-16 mb-8"></div>
+            
+            <div className="flex justify-center mt-16 mb-8"></div>
 
-
-                <Project 
-                videoSrc="/images/map.mov" 
+            <Project 
+                youtubeEmbedId="X4c77AnD7O0"
                 videoClassName="w-[720px] h-[450px] overflow-hidden"
+                videoScaleWidth={110}
+                videoScaleHeight={110}
                 headerText="Map Page" 
                 date="" 
                 bodyText="This map function was made via feedback on the page's multiple previous mapping functions.
                 This page's purpose is to allow botanists to map specimens across different types of maps, view detailed information for each data point, compare multiple species or genera at once,
-                 and export their results. " 
+                 and export their results." 
             />
         </div>
     );
