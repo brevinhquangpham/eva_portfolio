@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Line from '../components/Line'
 import Project from '../components/Project'
 
 function SDNHM() {

@@ -1,5 +1,4 @@
 import React from 'react';
-import Line from './Line';
 import Carousel from './Carousel';
 
 function Project({ imgSrc, videoSrc, youtubeEmbedId, carouselImages, headerText, bodyText, date, videoClassName, titleOnTop, videoScaleWidth = 110, videoScaleHeight = 110 }) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBarSelector from './NavBarSelector'
 
 function NavBarElement({ linkTo, text }) {
     return (
