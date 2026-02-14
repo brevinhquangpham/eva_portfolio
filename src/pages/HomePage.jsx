@@ -23,7 +23,7 @@ function HomePage() {
                         </h1>
                         <p className="font-raleway text-2xl text-body_text leading-normal 
                         tracking-wider" style={{ maxWidth: '60rem' }}> 
-                        I'm a creative designer passionate about 3D modeling and UI design. 
+                        I'm a creative designer passionate about 3D modeling and design. 
                         Currently I'm finishing my degree in Interdisciplinary Computing and the
                          Arts with a minor in Congitive Science at UC San Diego. 
                         </p>
