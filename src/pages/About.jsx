@@ -26,7 +26,7 @@ function About() {
                 <div>
                     <img
                         src="/images/eva.jpg"
-                        alt="EVA project banner image"
+                        alt="Self Portrait"
                         className="w-[1200px] h-[400px] object-cover mb-40 border-2 border-gray-400"
                     />
                 </div>
