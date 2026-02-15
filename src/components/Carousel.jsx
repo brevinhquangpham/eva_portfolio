@@ -24,6 +24,49 @@ function Carousel({ images }) {
         return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
     };
 
+    const isYouTube = (src) => {
+        return typeof src === 'object' && src.youtubeEmbedId;
+    };
+
+    const renderMedia = () => {
+        const currentItem = images[currentIndex];
+
+        if (isYouTube(currentItem)) {
+            return (
+                <div className="relative w-full h-full overflow-hidden">
+                    <iframe
+                        className="w-full h-full object-contain transition-opacity duration-500"
+                        width="100%"
+                        height="calc(100% + 60px)"
+                        src={`https://www.youtube.com/embed/${currentItem.youtubeEmbedId}?autoplay=1&mute=1&loop=1&playlist=${currentItem.youtubeEmbedId}&controls=0&modestbranding=1&showinfo=0&rel=0`}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                </div>
+            );
+        } else if (isVideo(currentItem)) {
+            return (
+                <video
+                    src={currentItem}
+                    className="w-full h-full object-contain transition-opacity duration-500"
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                />
+            );
+        } else {
+            return (
+                <img
+                    src={currentItem}
+                    alt={`Slide ${currentIndex + 1}`}
+                    className="w-full h-full object-contain transition-opacity duration-500"
+                />
+            );
+        }
+    };
+
     return (
         <div className="w-full max-w-5xl mx-auto">
             <div className="flex items-center gap-6">
@@ -40,22 +83,7 @@ function Carousel({ images }) {
 
     
                 <div className="relative w-full aspect-[18/10] overflow-hidden rounded-2xl bg-gray-400">
-                    {isVideo(images[currentIndex]) ? (
-                        <video
-                            src={images[currentIndex]}
-                            className="w-full h-full object-contain transition-opacity duration-500"
-                            controls
-                            autoPlay
-                            loop
-                            muted
-                        />
-                    ) : (
-                        <img
-                            src={images[currentIndex]}
-                            alt={`Slide ${currentIndex + 1}`}
-                            className="w-full h-full object-contain transition-opacity duration-500"
-                        />
-                    )}
+                    {renderMedia()}
 
                     <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {currentIndex + 1} / {images.length}

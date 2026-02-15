@@ -26,8 +26,7 @@ function HomePage() {
                             style={{ maxWidth: "41rem" }}
                         >
                             {" "}
-                            I'm a creative designer pursuing videogame asset or
-                            UI design. Currently I’m finishing my degree in
+                            I'm a creative designer passionate about 3D modeling and design. Currently I’m finishing my degree in
                             Interdisciplinary Computing and the Arts with a
                             minor in Congitive Science at UC San Diego.
                         </p>
@@ -35,7 +34,7 @@ function HomePage() {
                 </div>
                 <div className="flex flex-col justify-center items-center pr-20 mt-10">
                     <img
-                        src="/images/eva.jpg"
+                        src="/images/conpic.jpg"
                         alt="Eva"
                         className="w-72 h-auto border-2 border-gray-400"
                     />
@@ -64,8 +63,35 @@ function HomePage() {
                     </div>
                 </div>
             </div>
+
+
+            
             <div id="portfolio-section">
+        
+
+            <div>
                 <Project
+                    imgSrc="/images/poster.jpeg"
+                    headerText="Research on Ancient Garment Recreation"
+                    date="November 2025"
+                    bodyText="Recreations of 16th centure B.C.E Shasu Garments. Made in Marvelous Designer and displayed
+                    in Unreal Engine 5." 
+                />
+            </div>
+            <div className="flex justify-center mt-4 mb-12">
+                <Link to="/research">
+                    <button className="bg-slate-400 text-white font-raleway px-6 py-3 rounded-2xl hover:bg-big_text ">
+                        View Full Project
+                    </button>
+                </Link>
+            </div>
+
+            <div className="flex justify-center mt-4 mb-8">
+                <Line length="80%" color="#9CA3AF"></Line>
+            
+            </div>
+
+            <Project
                     imgSrc="/images/nathome.png"
                     headerText="Plant Atlas Redesign"
                     date="September 2025"
@@ -83,6 +109,25 @@ function HomePage() {
             <div className="flex justify-center mt-4 mb-8">
                 <Line length="80%" color="#9CA3AF"></Line>
             </div>
+
+
+            <Project
+                imgSrc="/images/katamari1.jpg"
+                headerText="Katamari Prince 3D model"
+                date="April 2025"
+                bodyText="3D model of Katamari, made in Zbrush for printing or use in animation"
+            />
+            <div className="flex justify-center mt-4 mb-12">
+                <a href="https://drive.google.com/drive/folders/1I-rwC_aA1HUVwk4KlewBxVfhhCzRwB3x?usp=drive_link">
+                    <button className="bg-slate-400 text-white font-raleway px-6 py-3 rounded-2xl hover:bg-big_text ">
+                        View Full Project
+                    </button>
+                </a>
+            </div>
+            <div className="flex justify-center mt-4 mb-8">
+                <Line length="80%" color="#9CA3AF"></Line>
+            </div>
+
 
             <Project
                 imgSrc="/images/katamari1.jpg"
