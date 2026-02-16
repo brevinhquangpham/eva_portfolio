@@ -129,22 +129,7 @@ function HomePage() {
             </div>
 
 
-            <Project
-                imgSrc="/images/katamari1.jpg"
-                headerText="Katamari Prince 3D model"
-                date="April 2025"
-                bodyText="3D model of Katamari, made in Zbrush for printing or use in animation"
-            />
-            <div className="flex justify-center mt-4 mb-12">
-                <a href="https://drive.google.com/drive/folders/1I-rwC_aA1HUVwk4KlewBxVfhhCzRwB3x?usp=drive_link">
-                    <button className="bg-slate-400 text-white font-raleway px-6 py-3 rounded-2xl hover:bg-big_text ">
-                        View Full Project
-                    </button>
-                </a>
-            </div>
-            <div className="flex justify-center mt-4 mb-8">
-                <Line length="80%" color="#9CA3AF"></Line>
-            </div>
+        
 
             <Project
                 imgSrc="/images/level.png"
