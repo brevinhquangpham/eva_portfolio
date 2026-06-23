@@ -25,13 +25,21 @@ function Contact() {
                     <p className="font-raleway font-semibold text-l">Phone:</p>
                     <ContactLine text="(510)990-5714" />
                     </div>
-                    <div className="flex items-center pr-[20%] -mt-4 sm:pr-[10%]">
-                        <div className="flex items-center gap-5">
-                            <img src="/images/Linkedin.svg" alt="linkedin" className="w-auto h-8" />
-                            <a href="https://www.linkedin.com/in/eva-intoci-784461305" className="underline font-raleway text-big_text">Connect with me on Linkedin</a>
-                        </div>
-                       
-                    </div>
+                    <div className="flex items-center pr-2 -mt-4 sm:pr-[20%]">
+    <div className="flex items-center gap-5">
+        <img
+            src="/images/Linkedin.svg"
+            alt="linkedin"
+            className="w-auto h-8"
+        />
+        <a
+    href="https://www.linkedin.com/in/eva-intoci-784461305"
+    className="underline font-raleway text-big_text w-24 sm:w-auto"
+>
+    Connect with me on Linkedin
+</a>
+    </div>
+</div>
                 </div>
 
             </div>
