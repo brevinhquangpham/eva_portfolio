@@ -86,15 +86,16 @@ function Project({ imgSrc, videoSrc, youtubeEmbedId, carouselImages, headerText,
                             <img src={imgSrc} alt="img" className="p-8 w-[700px] h-auto" />
                         )}
                     </div>
-                    <div className="flex flex-col md:flex-row w-full p-4 gap-4">
-                        <div className="flex flex-col justify-start w-1/2 items-center">
-                            <h1 className="font-cram font-bold text-3xl">{headerText}</h1>
-                        </div>
-                        <div className="items-center justify-center w-1/2">
-                            <p className="font-raleway font-semibold">{date}</p>
-                            <p className="font-raleway">{bodyText}</p>
-                        </div>
-                    </div>
+                    <div className="flex flex-col w-full p-4 gap-2 md:flex-row md:gap-4">
+    <div className="flex flex-row items-baseline gap-2 md:flex-col md:w-1/2 md:items-center md:justify-start">
+        <h1 className="font-cram font-bold text-3xl">{headerText}</h1>
+        <p className="font-raleway font-semibold md:hidden">{date}</p>
+    </div>
+    <div className="md:w-1/2">
+        <p className="font-raleway font-semibold hidden md:block">{date}</p>
+        <p className="font-raleway text-center md:text-left">{bodyText}</p>
+    </div>
+</div>
                 </>
             )}
         </div>
